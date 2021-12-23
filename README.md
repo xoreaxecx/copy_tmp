@@ -1,5 +1,6 @@
 # copy_tmp
-A simple python tool to catch temporary files.
+A simple python tool to catch temporary files.  
+In some cases, files are protected from copying even with the privilege escalation (for example, antivirus files). For such situations, you can use the help of [RawCopy.exe](https://github.com/jschicht/RawCopy), which must be placed in the script directory or specify the full path to the executable file.
 
 ---
 ```
