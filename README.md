@@ -4,8 +4,8 @@ In some cases, files are protected from copying even with the privilege escalati
 
 ---
 ```
-usage: copy_tmp.py [-h] -from from\dir\path -to to\dir\path [-checkdirs] [-kill procname.exe] [-once] [-exc extension]
-                   [-d milliseconds] [-rc] [-rcpath path\to\RC]
+usage: copy_tmp.py [-h] -from from\dir\path -to to\dir\path [-checkdirs] [-kill procname.exe]
+                   [-once] [-exc extension] [-d milliseconds] [-rc] [-rcpath path\to\RC]
 
 optional arguments:
   -h, --help           show this help message and exit
