@@ -158,15 +158,23 @@ def check_args(arguments):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='his name is Robert Paulson.')
-    parser.add_argument('-from', dest='path_from', metavar='from\\dir\\path', required=True, type=str, help='path to the dir to catch file.')
-    parser.add_argument('-to', dest='path_to', metavar='to\\dir\\path', required=True, type=str, help='path to the dir to store file.')
-    parser.add_argument('-checkdirs', action='store_true', help='check dirs and their contents at 1st level.')
-    parser.add_argument('-kill', metavar='procname.exe', action='append', type=str, help='if access denied try to kill a process by name. multiple -kill supported.')
-    parser.add_argument('-once', action='store_true', help='kills the specified process once without repeating.')
-    parser.add_argument('-exc', metavar='extension', action='append', type=str, default=None, help='exclude extension from monitoring. multiple -exc supported.')
-    parser.add_argument('-d', metavar='milliseconds', type=int, default=200, help='delay between file checks in milliseconds. 200 is default.')
+    parser.add_argument('-from', dest='path_from', metavar='from\\dir\\path', required=True, type=str, 
+                        help='path to the dir to catch file.')
+    parser.add_argument('-to', dest='path_to', metavar='to\\dir\\path', required=True, type=str, 
+                        help='path to the dir to store file.')
+    parser.add_argument('-checkdirs', action='store_true', 
+                        help='check dirs and their contents at 1st level.')
+    parser.add_argument('-kill', metavar='procname.exe', action='append', type=str, 
+                        help='if access denied try to kill a process by name. multiple -kill supported.')
+    parser.add_argument('-once', action='store_true', 
+                        help='kills the specified process once without repeating.')
+    parser.add_argument('-exc', metavar='extension', action='append', type=str, default=None, 
+                        help='exclude extension from monitoring. multiple -exc supported.')
+    parser.add_argument('-d', metavar='milliseconds', type=int, default=200, 
+                        help='delay between file checks in milliseconds. 200 is default.')
     parser.add_argument('-rc', action='store_true', help='use RawCopy.exe to copy blocked files.')
-    parser.add_argument('-rcpath', dest='rc_path', metavar='path\\to\\RC', type=str, help='path to the RawCopy.exe. "script dir\\RawCopy.exe" is default.')
+    parser.add_argument('-rcpath', dest='rc_path', metavar='path\\to\\RC', type=str, 
+                        help='path to the RawCopy.exe. "script dir\\RawCopy.exe" is default.')
     args = parser.parse_args()
 
     check_args(args)
